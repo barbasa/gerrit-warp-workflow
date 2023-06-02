@@ -1,0 +1,15 @@
+---
+name: Gerrit Index
+command: |-
+    java -jar {{gerrit_sitepath}}/bin/gerrit.war reindex -d {{gerrit_sitepath}}
+tags:
+  - gerrit
+description: Reindex Gerrit installation
+arguments:
+  - name: gerrit_sitepath
+    description: Base path of the Gerrit installation
+    default_value: ~
+source_url: "https://gerrit-documentation.storage.googleapis.com/Documentation/3.8.0/linux-quickstart.html"
+author: Fabio Ponciroli
+author_url: "https://github.com/barbasa"
+shells: []
