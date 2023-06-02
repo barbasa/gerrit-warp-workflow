@@ -1,0 +1,19 @@
+---
+name: Gerrit Local Dev
+command: |-
+    rm -fr /tmp/gerrit-{{gerrit_version}} 
+    mkdir /tmp/gerrit-{{gerrit_version}}
+    cd /tmp/gerrit-{{gerrit_version}}
+    ls /tmp/gerrit-{{gerrit_version}}.war || wget -O /tmp/gerrit-{{gerrit_version}}.war https://gerrit-releases.storage.googleapis.com/gerrit-{{gerrit_version}}.war
+    java -jar /tmp/gerrit-{{gerrit_version}}.war init --batch --dev -d . --no-auto-start
+tags:
+  - gerrit
+description: Install Gerrit code review locally
+arguments:
+  - name: gerrit_version
+    description: Gerrritt version to install
+    default_value: 3.7.3
+source_url: "https://gerrit-documentation.storage.googleapis.com/Documentation/3.8.0/linux-quickstart.html"
+author: Fabio Ponciroli
+author_url: "https://github.com/barbasa"
+shells: []
