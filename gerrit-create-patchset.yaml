@@ -1,0 +1,15 @@
+---
+name: Gerrit Create Patchset
+command: |-
+    git push origin HEAD:refs/for/{{branch}}
+tags:
+  - gerrit
+description: Create a new Gerrit patchset
+arguments:
+  - name: branch
+    description: Branch to push the patchset to
+    default_value: master
+source_url: "https://gerrit-documentation.storage.googleapis.com/Documentation/3.8.0/linux-quickstart.html"
+author: Fabio Ponciroli
+author_url: "https://github.com/barbasa"
+shells: []
