@@ -5,7 +5,7 @@ command: |-
     mkdir /tmp/gerrit-{{gerrit_version}}
     cd /tmp/gerrit-{{gerrit_version}}
     ls /tmp/gerrit-{{gerrit_version}}.war || wget -O /tmp/gerrit-{{gerrit_version}}.war https://gerrit-releases.storage.googleapis.com/gerrit-{{gerrit_version}}.war
-    java -jar /tmp/gerrit-{{gerrit_version}}.war init --batch --dev -d . --no-auto-start
+    java -jar /tmp/gerrit-{{gerrit_version}}.war init --batch --dev -d . --no-auto-start --install-all-plugins
 tags:
   - gerrit
 description: Install Gerrit code review locally
