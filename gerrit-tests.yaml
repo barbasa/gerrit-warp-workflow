@@ -1,0 +1,15 @@
+---
+name: Gerrit java test
+command: |-
+    bazelisk test -- //javatests/{{category}}
+tags:
+  - gerrit
+description: execute Gerrit java tests
+arguments:
+  - name: category
+    description: folder matching category of tests to execute (all by default, i.e. integration/... to execute all integration tests)
+    default_value: ...
+source_url: "https://gerrit-documentation.storage.googleapis.com/Documentation/3.8.0/linux-quickstart.html"
+author: Diego Zambelli Sessona
+author_url: "https://github.com/dzsessona"
+shells: []
